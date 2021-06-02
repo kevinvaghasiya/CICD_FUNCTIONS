@@ -13,7 +13,6 @@ steps:
         'deploy',
         'cicd',
         '--trigger-http',
-        'http',
         '--runtime',
         'nodejs14',
         '--entry-point',
