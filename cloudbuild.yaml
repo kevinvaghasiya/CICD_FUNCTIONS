@@ -1,0 +1,12 @@
+# [START functions_ci_cd_cloud_build]
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+    dir: 'functions'
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['build']
+    dir: 'functions'
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['functions', 'deploy', '--only', 'cicd']
+    dir: 'functions'
+# [END functions_ci_cd_cloud_build]
