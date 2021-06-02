@@ -18,5 +18,5 @@ steps:
         '--entry-point',
         'cicd',
       ]
-    dir: 'functions'
+    dir: 'functions/lib'
 # [END functions_ci_cd_cloud_build]
