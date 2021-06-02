@@ -6,6 +6,7 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'build']
     dir: 'functions'
+  - name: 'ls -al'
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       [
