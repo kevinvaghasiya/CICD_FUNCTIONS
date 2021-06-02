@@ -13,10 +13,9 @@ steps:
         'deploy',
         'cicd',
         '--trigger-http',
+        '--allow-unauthenticated',
         '--runtime',
         'nodejs14',
-        '--entry-point',
-        'cicd',
       ]
     dir: 'functions/lib'
 # [END functions_ci_cd_cloud_build]
