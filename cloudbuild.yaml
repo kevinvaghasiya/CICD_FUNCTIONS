@@ -7,6 +7,17 @@ steps:
     args: ['run', 'build']
     dir: 'functions'
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['functions', 'deploy', 'cicd']
+    args:
+      [
+        'functions',
+        'deploy',
+        'cicd',
+        '--trigger-http',
+        'http',
+        '--runtime',
+        'nodejs14',
+        '--entry-point',
+        'cicd',
+      ]
     dir: 'functions'
 # [END functions_ci_cd_cloud_build]
